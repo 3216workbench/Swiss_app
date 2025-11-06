@@ -586,7 +586,8 @@ Device C (Priority 3) ─┘
 **For clarifications on this design document, please provide answers to the questions in Section 2.**
 
 Once all requirements are clarified, development can begin with a clear roadmap and specifications.
-What's your preferred compensation arrangement for this project?
+
+What's your preferred compensation arrangement for this project? What timeframe?
 
 ---
 
