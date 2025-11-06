@@ -577,7 +577,7 @@ Device C (Priority 3) ─┘
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.0 | 2025-11-05 | Design Team | Initial design document |
+| 1.0 | 2025-11-05 | 3216 | Initial design document |
 
 ---
 
