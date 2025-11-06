@@ -34,7 +34,6 @@
 
 **Q1: What identifier should we use for device registration?**
 Options:
-- A) Volume Serial Number (unique per formatted drive)
 - B) Hardware Serial Number (USB device hardware ID)
 - C) Combination of Vendor ID, Product ID, Serial
 - D) User-assigned friendly name + drive letter tracking
@@ -43,13 +42,10 @@ Options:
 
 **Q2: When a non-registered USB device is connected, should:**
 - A) Show a prompt asking "Register this device?"
-- B) Silently ignore it
-- C) Log it but take no action
 
 ### 2.2 VIDEO DETECTION & SELECTION
 
 **Q3: Should the app scan:**
-- A) Entire USB device for video files
 - B) Only specific folders (e.g., /DCIM/, /Videos/)
 - C) User-configurable per device
 
@@ -61,7 +57,7 @@ Should we support ALL or specific formats?
 - A) Skip files already downloaded (check by hash)
 - B) Skip files with same name in destination
 - C) Always copy, append number to duplicates
-- D) Ask user each time
+! D) Ask user each time
 
 **RECOMMENDATION:** Option A (hash-based) for reliability
 
@@ -73,70 +69,59 @@ Should we support ALL or specific formats?
 
 **Q7: Subfolder organization pattern?**
 - A) [Device_Name]/[Date]/files
-- B) [Date]/[Device_Name]/files
-- C) [Device_Name]/[Year]/[Month]/files
-- D) [Device_Name]/Original/[Date]/ + Converted/[Date]/
-- E) Custom pattern defined by user
+
 
 **RECOMMENDATION:** Option D - separates originals & converted
 
 **Q8: Should files be deleted from USB after successful copy?**
 - A) Never delete (keep originals on device)
-- B) Always delete after successful copy
-- C) User choice per device
-- D) Ask after each operation
+
 
 **Q9: What happens if destination disk space is insufficient?**
 - A) Show error and abort
-- B) Copy what fits, pause for user action
-- C) Skip largest files to fit remaining
+
 
 **Q10: If USB disconnects during copy, should we:**
-- A) Resume when reconnected (requires file tracking)
-- B) Restart the entire copy operation
+
 - C) Mark as failed, require manual retry
 
 ### 2.4 VIDEO CONVERSION SPECIFICATIONS
 
 **Q11: Target resolution(s) for conversion?**
 - A) 1080p (1920x1080) Full HD
-- B) 720p (1280x720) HD
-- C) 480p (854x480) SD
-- D) Multiple (create all versions)
-- E) User selectable per operation
+
 
 **Q12: File handling after conversion:**
-- A) Keep BOTH original 4K + converted version(s)
-- B) Keep ONLY converted version(s), delete 4K original
+X A) Keep BOTH original 4K + converted version(s)
+X B) Keep ONLY converted version(s), delete 4K original
 - C) User choice per device configuration
 
 **Q13: Output video format & codec?**
 - A) Same as source (maintain format)
-- B) Always MP4 with H.264 (universal compatibility)
-- C) MP4 with H.265/HEVC (better compression, smaller)
-- D) User configurable
+
 
 **RECOMMENDATION:** Option B for compatibility, or C if file size is critical (note: H.265 slower to encode)
 
 **Q14: Conversion timing:**
-- A) Convert immediately as each file is copied
-- B) Copy all files first, then convert batch
+
 - C) Parallel: copy + convert simultaneously
 
 **RECOMMENDATION:** Option B or C for efficiency
 
 **Q15: Encoding quality vs speed preference?**
 - A) Fast encoding (lower quality, quick completion)
-- B) Balanced (moderate quality & speed)
-- C) High quality (slower, best output)
+X B) Balanced (moderate quality & speed)
+X C) High quality (slower, best output)
 - D) User configurable per device
 
 **Q16: Use hardware acceleration (GPU encoding)?**
-- A) Always use if available (NVIDIA NVENC, Intel QSV)
-- B) CPU only for better quality
+
 - C) Auto-detect and prefer GPU
 
 **RECOMMENDATION:** Option C - GPU when available for speed
+
+
+--------------------------------------------------------
 
 ### 2.5 RESOURCE MANAGEMENT & PERFORMANCE
 
