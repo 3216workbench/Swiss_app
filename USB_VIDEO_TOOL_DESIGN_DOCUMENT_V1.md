@@ -127,30 +127,24 @@ X C) High quality (slower, best output)
 
 **Q17: Maximum concurrent video conversions?**
 - A) 1 at a time (safest, slowest)
-- B) 2 concurrent conversions
-- C) Based on CPU cores (e.g., cores/2)
-- D) User configurable limit
 
 **RECOMMENDATION:** Option C with max cap of 4
 
 **Q18: File copy operations - simultaneous transfers?**
 - A) One device at a time (sequential)
-- B) All devices simultaneously
 - C) Limit to 2-3 concurrent transfers
 
 **RECOMMENDATION:** Option C to avoid USB bus saturation
 
 **Q19: Priority system when queue is full?**
 - A) First connected, first processed (FIFO)
-- B) User can manually set priority
-- C) Smaller jobs first (shortest job first)
+
 
 ### 2.6 USER INTERFACE & INTERACTION
 
 **Q20: When registered USB device is detected:**
 - A) Start operations immediately (fully automatic)
-- B) Show preview of files, wait for user confirmation
-- C) Configurable per device
+
 
 **Q21: Progress indication - what details to show?**
 - A) Overall completion percentage
@@ -162,22 +156,20 @@ X C) High quality (slower, best output)
 - G) All of the above (recommended)
 
 **Q22: Can user cancel/pause operations mid-process?**
-- A) Yes, with option to resume later
+
 - B) Yes, but must restart from beginning
-- C) No, must complete once started
+
 
 **Q23: Completion notification content?**
-- A) Simple: "USB device processing complete"
-- B) Detailed: file count, sizes, time taken
+
 - C) Interactive: click to open folder or view log
 
 **RECOMMENDATION:** Option C for best user experience
 
 **Q24: Error handling - what if conversion fails?**
-- A) Skip failed files, continue with others
+
 - B) Retry failed files (with limit)
 - C) Pause and ask user how to proceed
-- D) Log errors, continue, show summary at end
 
 **RECOMMENDATION:** Option D with option B for network issues
 
